@@ -1,0 +1,44 @@
+<% include partials/header %>
+
+<div class="container">
+    <!-- <p><b>City: </b><%= data.name %></p>
+    <p><b>Type: </b><%= data.weather[0].description %></p>
+    <p><b>Tempreature: </b><%= data.main.temp %></p>
+    <p><b>Humidity: </b><%= data.main.humidity %></p>
+    <p><b>Minimum Tempreature: </b><%= data.main.temp_min %></p>
+    <p><b>Maximum Tempreature: </b><%= data.main.temp_max %></p>
+    <p><b>Visibility: </b><%= data.visibility %></p> -->
+
+    <table>
+        <tr>
+            <th><b>City</b></th>
+            <td><%= data.name %></td>
+        </tr>
+        <tr>
+            <th><b>Type</b></th>
+            <td><%= data.weather[0].description %></td>
+        </tr>
+        <tr>
+            <th>Tempreature</th>
+            <td><%=data.main.temp-273 %> c</td>
+        </tr>
+        <tr>
+            <th>Humidity</th>
+            <td><%= data.main.humidity %></td>
+        </tr>
+        <tr>
+            <th>Minimum Tempreature</th>
+            <td><%= data.main.temp_min %> F</td>
+        </tr>
+        <tr>
+            <th>Maximum Tempreature</th>
+            <td><%= data.main.temp_max %> F</td>
+        </tr>
+        <tr>
+            <th>Visibility</th>
+            <td><%= data.visibility %></td>
+        </tr>
+    </table>
+</div>
+
+<% include partials/footer %>
